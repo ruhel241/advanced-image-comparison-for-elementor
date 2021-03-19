@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Main Elementor Test Extension Class
+ * Main Advanced Image Comparison Class
  *
  * The main class that initiates and runs the plugin.
  *
@@ -242,7 +242,7 @@ final class AdvancedImageComparison
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
 			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'aic' ),
-			'<strong>' . esc_html__( 'Elementor Test Extension', 'aic' ) . '</strong>',
+			'<strong>' . esc_html__( 'Advanced Image Comparison', 'aic' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', 'aic' ) . '</strong>'
 		);
 
@@ -266,7 +266,7 @@ final class AdvancedImageComparison
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
 			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'aic' ),
-			'<strong>' . esc_html__( 'Elementor Test Extension', 'aic' ) . '</strong>',
+			'<strong>' . esc_html__( 'Advanced Image Comparison', 'aic' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', 'aic' ) . '</strong>',
 			 self::MINIMUM_ELEMENTOR_VERSION
 		);
@@ -291,7 +291,7 @@ final class AdvancedImageComparison
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
 			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'aic' ),
-			'<strong>' . esc_html__( 'Elementor Test Extension', 'aic' ) . '</strong>',
+			'<strong>' . esc_html__( 'Advanced Image Comparison', 'aic' ) . '</strong>',
 			'<strong>' . esc_html__( 'PHP', 'aic' ) . '</strong>',
 			 self::MINIMUM_PHP_VERSION
 		);
