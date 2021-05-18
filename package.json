@@ -1,5 +1,5 @@
 {
-  "name": "advanced-image-comparison",
+  "name": "advanced-image-comparison-for-elementor",
   "version": "1.0.0",
   "description": "Advanced Testimonial Carousel for Elementor WordPress Plugin",
   "main": "index.js",
@@ -19,7 +19,6 @@
     "hot": "mix watch --hot",
     "production": "mix --production"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ruhel241/advanced-testimonial-carousel.git"

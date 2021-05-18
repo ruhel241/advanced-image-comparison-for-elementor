@@ -1,9 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Advanced Image Comparison\n"
+"Project-Id-Version: Advanced Image Comparison for Elementor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-19 05:18+0000\n"
+"POT-Creation-Date: 2021-05-18 11:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,18 +13,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.0; wp-5.6.2\n"
+"X-Loco-Version: 2.5.0; wp-5.7.1\n"
 "X-Domain: aic"
 
 #. 1: Plugin name 2: Elementor
-#: advanced-image-comparison.php:244
+#: advanced-image-comparison-for-elementor.php:244
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
 msgstr ""
 
 #. 1: Plugin name 2: Elementor 3: Required Elementor version
 #. 1: Plugin name 2: PHP 3: Required PHP version
-#: advanced-image-comparison.php:268 advanced-image-comparison.php:293
+#: advanced-image-comparison-for-elementor.php:268
+#: advanced-image-comparison-for-elementor.php:293
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
@@ -42,10 +43,15 @@ msgstr ""
 msgid "Additional Options"
 msgstr ""
 
-#. Name of the plugin
-#: advanced-image-comparison.php:245 advanced-image-comparison.php:269
-#: advanced-image-comparison.php:294
+#: advanced-image-comparison-for-elementor.php:245
+#: advanced-image-comparison-for-elementor.php:269
+#: advanced-image-comparison-for-elementor.php:294
+#: widgets/AICImageComparisonWidget.php:24
 msgid "Advanced Image Comparison"
+msgstr ""
+
+#. Name of the plugin
+msgid "Advanced Image Comparison for Elementor"
 msgstr ""
 
 #. Description of the plugin
@@ -155,7 +161,8 @@ msgstr ""
 msgid "Divider"
 msgstr ""
 
-#: advanced-image-comparison.php:246 advanced-image-comparison.php:270
+#: advanced-image-comparison-for-elementor.php:246
+#: advanced-image-comparison-for-elementor.php:270
 msgid "Elementor"
 msgstr ""
 
@@ -276,7 +283,7 @@ msgstr ""
 msgid "Padding"
 msgstr ""
 
-#: advanced-image-comparison.php:295
+#: advanced-image-comparison-for-elementor.php:295
 msgid "PHP"
 msgstr ""
 

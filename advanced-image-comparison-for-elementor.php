@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Advanced Image Comparison
+ * Plugin Name: Advanced Image Comparison for Elementor
  * Description: Advanced Image Comparison for elementor wordpress plugin
  * Plugin URI:  https://github.com/ruhel241/advanced-image-comparison
  * Version:     1.0.0

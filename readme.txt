@@ -1,9 +1,9 @@
-=== Advanced Image Comparison ===
+=== Advanced Image Comparison for Elementor ===
 Contributors: ruhel241
-Tags:  Elementor Image Comparison, Elementor, Image Comparison.
+Tags:  before after image comparison slider, Elementor, Image Comparison, after, before.
 Requires at least: 4.5
 Requires PHP: 5.4 or greater
-Tested up to: 5.6.1
+Tested up to: 5.7.2
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

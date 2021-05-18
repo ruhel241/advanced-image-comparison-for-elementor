@@ -21,7 +21,7 @@ class AICImageComparisonWidget extends Widget_Base
 
     public function get_title() 
     {
-        return __( 'AIC Image Comparison', 'atc' );
+        return __( 'Advanced Image Comparison', 'aic' );
     }
 
     public function get_icon() 
