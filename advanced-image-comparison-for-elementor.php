@@ -3,7 +3,7 @@
  * Plugin Name: Advanced Image Comparison for Elementor
  * Description: Advanced Image Comparison for elementor wordpress plugin
  * Plugin URI:  https://github.com/ruhel241/advanced-image-comparison
- * Version:     1.0.0
+ * Version:     2.0.0
  * Author:      Md.Ruhel Khan
  * Author URI:  https://github.com/ruhel241/
  * Text Domain: aic
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * The main class that initiates and runs the plugin.
  *
- * @since 1.0.0
+ * @since 2.0.0
  */
 final class AdvancedImageComparison 
 {
@@ -26,25 +26,25 @@ final class AdvancedImageComparison
 	/**
 	 * Plugin Version
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '2.0.0';
 
 	/**
 	 * Minimum Elementor Version
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @var string Minimum Elementor version required to run the plugin.
 	 */
-	const MINIMUM_ELEMENTOR_VERSION = '2.0.0';
+	const MINIMUM_ELEMENTOR_VERSION = '3.6.7';
 
 	/**
 	 * Minimum PHP Version
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @var string Minimum PHP version required to run the plugin.
 	 */
@@ -53,7 +53,7 @@ final class AdvancedImageComparison
 	/**
 	 * Instance
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access private
 	 * @static
@@ -68,7 +68,7 @@ final class AdvancedImageComparison
 	 *
 	 * Ensures only one instance of the class is loaded or can be loaded.
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 * @static
@@ -88,7 +88,7 @@ final class AdvancedImageComparison
 	/**
 	 * Constructor
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 */
@@ -105,7 +105,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `init` action hook.
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 */
@@ -122,7 +122,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 */
@@ -141,7 +141,7 @@ final class AdvancedImageComparison
 	 * Checks if the installed version of Elementor meets the plugin's minimum requirement.
 	 * Checks if the installed PHP version meets the plugin's minimum requirement.
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 */
@@ -177,7 +177,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 */
@@ -186,7 +186,7 @@ final class AdvancedImageComparison
 		$this->loadTextDomain();
 
 		// Add Plugin actions
-		add_action( 'elementor/widgets/widgets_registered', [ $this, 'init_widgets' ] );
+		add_action( 'elementor/widgets/register', [ $this, 'init_widgets' ] );
 		
 		add_action('elementor/frontend/after_enqueue_styles', function() {
 			wp_enqueue_style( 'aic-image-comparison', plugin_dir_url( __FILE__ ). 'assets/css/aic_image_comparison.css');
@@ -206,18 +206,17 @@ final class AdvancedImageComparison
 	 *
 	 * Include widgets files and register them
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 */
-	public function init_widgets() {
+	public function init_widgets($widgets_manager) {
 		
 		// Include Widget files
 		require_once( __DIR__ . '/widgets/AICImageComparisonWidget.php' );
 
 		// Register widget
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new AIC\Classes\Widgets\AICImageComparisonWidget() );
-
+		$widgets_manager->register( new AIC\Classes\Widgets\AICImageComparisonWidget() );
 	}
 
 	public function loadTextDomain()
@@ -231,7 +230,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have Elementor installed or activated.
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 */
@@ -255,7 +254,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have a minimum required Elementor version.
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 */
@@ -280,7 +279,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have a minimum required PHP version.
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @access public
 	 */
