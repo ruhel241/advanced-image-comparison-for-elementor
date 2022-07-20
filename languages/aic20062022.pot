@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Image Comparison for Elementor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-20 10:45+0000\n"
+"POT-Creation-Date: 2021-05-18 11:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,40 +13,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.2; wp-6.0.1\n"
+"X-Loco-Version: 2.5.0; wp-5.7.1\n"
 "X-Domain: aic"
 
 #. 1: Plugin name 2: Elementor
-#: advanced-image-comparison-for-elementor.php:260
+#: advanced-image-comparison-for-elementor.php:244
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
 msgstr ""
 
 #. 1: Plugin name 2: Elementor 3: Required Elementor version
 #. 1: Plugin name 2: PHP 3: Required PHP version
-#: advanced-image-comparison-for-elementor.php:284
-#: advanced-image-comparison-for-elementor.php:309
+#: advanced-image-comparison-for-elementor.php:268
+#: advanced-image-comparison-for-elementor.php:293
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:65
-#: widgets/AICImageComparisonWidget.php:97
+#: widgets/AICImageComparisonWidget.php:66
+#: widgets/AICImageComparisonWidget.php:98
 msgid "Add alt tag"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:66
+#: widgets/AICImageComparisonWidget.php:67
 msgid "Add before image Alt Tag"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:119
+#: widgets/AICImageComparisonWidget.php:120
 msgid "Additional Options"
 msgstr ""
 
-#: advanced-image-comparison-for-elementor.php:261
-#: advanced-image-comparison-for-elementor.php:285
-#: advanced-image-comparison-for-elementor.php:310
-#: widgets/AICImageComparisonWidget.php:23
+#: advanced-image-comparison-for-elementor.php:245
+#: advanced-image-comparison-for-elementor.php:269
+#: advanced-image-comparison-for-elementor.php:294
+#: widgets/AICImageComparisonWidget.php:24
 msgid "Advanced Image Comparison"
 msgstr ""
 
@@ -63,11 +63,11 @@ msgstr ""
 msgid "After"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:93
+#: widgets/AICImageComparisonWidget.php:94
 msgid "After Image Alt Tag"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:98
+#: widgets/AICImageComparisonWidget.php:99
 msgid "After image Alt Tag"
 msgstr ""
 
@@ -75,11 +75,11 @@ msgstr ""
 msgid "After Image Filter"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:86
+#: widgets/AICImageComparisonWidget.php:87
 msgid "After image label"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:264
+#: widgets/AICImageComparisonWidget.php:265
 msgid "Align"
 msgstr ""
 
@@ -87,7 +87,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:301
+#: widgets/AICImageComparisonWidget.php:302
 #: widgets/AICImageComparisonWidget.php:352
 msgid "Background Color"
 msgstr ""
@@ -96,16 +96,16 @@ msgstr ""
 msgid "Befor Image Filter"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:284
+#: widgets/AICImageComparisonWidget.php:285
 #: widgets/AICImageComparisonWidget.php:609
 msgid "Before"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:61
+#: widgets/AICImageComparisonWidget.php:62
 msgid "Before Image Alt Tag"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:55
+#: widgets/AICImageComparisonWidget.php:56
 msgid "before image label"
 msgstr ""
 
@@ -114,18 +114,18 @@ msgstr ""
 msgid "Blur"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:313
+#: widgets/AICImageComparisonWidget.php:314
 #: widgets/AICImageComparisonWidget.php:364
 #: widgets/AICImageComparisonWidget.php:527
 msgid "Border"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:583
+#: widgets/AICImageComparisonWidget.php:582
 msgid "Border Color"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:235
-#: widgets/AICImageComparisonWidget.php:322
+#: widgets/AICImageComparisonWidget.php:236
+#: widgets/AICImageComparisonWidget.php:323
 #: widgets/AICImageComparisonWidget.php:373
 #: widgets/AICImageComparisonWidget.php:537
 msgid "Border Radius"
@@ -136,11 +136,11 @@ msgstr ""
 msgid "Brightness"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:104
+#: widgets/AICImageComparisonWidget.php:105
 msgid "Choose After Image"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:72
+#: widgets/AICImageComparisonWidget.php:73
 msgid "Choose Before Image"
 msgstr ""
 
@@ -148,13 +148,7 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
-#: advanced-image-comparison-for-elementor.php:146
-msgid ""
-"Congratulations! you have installed \"Advanced Image Comparison\" for "
-"elementor plugin, Please rating this plugin."
-msgstr ""
-
-#: widgets/AICImageComparisonWidget.php:200
+#: widgets/AICImageComparisonWidget.php:201
 msgid "Container Max Width"
 msgstr ""
 
@@ -167,8 +161,8 @@ msgstr ""
 msgid "Divider"
 msgstr ""
 
-#: advanced-image-comparison-for-elementor.php:262
-#: advanced-image-comparison-for-elementor.php:286
+#: advanced-image-comparison-for-elementor.php:246
+#: advanced-image-comparison-for-elementor.php:270
 msgid "Elementor"
 msgstr ""
 
@@ -181,11 +175,11 @@ msgstr ""
 msgid "Handle"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:139
+#: widgets/AICImageComparisonWidget.php:140
 msgid "Horizontal"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:557
+#: widgets/AICImageComparisonWidget.php:556
 msgid "Hover"
 msgstr ""
 
@@ -203,27 +197,27 @@ msgid "Hue Rotate"
 msgstr ""
 
 #: widgets/AICImageComparisonWidget.php:506
-#: widgets/AICImageComparisonWidget.php:563
+#: widgets/AICImageComparisonWidget.php:562
 msgid "Icon Color"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:45
+#: widgets/AICImageComparisonWidget.php:46
 msgid "Image Comparison"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:183
+#: widgets/AICImageComparisonWidget.php:184
 msgid "Image Container"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:601
+#: widgets/AICImageComparisonWidget.php:600
 msgid "Image Filter"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:168
+#: widgets/AICImageComparisonWidget.php:169
 msgid "Image Overlay ?"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:126
+#: widgets/AICImageComparisonWidget.php:127
 msgid "Image Visibility"
 msgstr ""
 
@@ -232,19 +226,19 @@ msgstr ""
 msgid "Invert"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:257
+#: widgets/AICImageComparisonWidget.php:258
 msgid "Label"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:82
+#: widgets/AICImageComparisonWidget.php:83
 msgid "Label After"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:52
+#: widgets/AICImageComparisonWidget.php:53
 msgid "Label Before"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:136
+#: widgets/AICImageComparisonWidget.php:137
 msgid "Layout"
 msgstr ""
 
@@ -252,18 +246,18 @@ msgstr ""
 msgid "Md.Ruhel Khan"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:148
+#: widgets/AICImageComparisonWidget.php:149
 msgid "Move Slider On Click"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:158
+#: widgets/AICImageComparisonWidget.php:159
 msgid "Move Slider On Hover"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:151
-#: widgets/AICImageComparisonWidget.php:161
-#: widgets/AICImageComparisonWidget.php:171
-#: widgets/AICImageComparisonWidget.php:193
+#: widgets/AICImageComparisonWidget.php:152
+#: widgets/AICImageComparisonWidget.php:162
+#: widgets/AICImageComparisonWidget.php:172
+#: widgets/AICImageComparisonWidget.php:194
 msgid "no"
 msgstr ""
 
@@ -289,7 +283,7 @@ msgstr ""
 msgid "Padding"
 msgstr ""
 
-#: advanced-image-comparison-for-elementor.php:311
+#: advanced-image-comparison-for-elementor.php:295
 msgid "PHP"
 msgstr ""
 
@@ -303,20 +297,20 @@ msgstr ""
 msgid "Sepia"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:190
+#: widgets/AICImageComparisonWidget.php:191
 msgid "Set max width for the container?"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:290
+#: widgets/AICImageComparisonWidget.php:291
 #: widgets/AICImageComparisonWidget.php:341
 msgid "Text Color"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:388
+#: widgets/AICImageComparisonWidget.php:387
 msgid "Typography"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:140
+#: widgets/AICImageComparisonWidget.php:141
 msgid "Vertical"
 msgstr ""
 
@@ -324,9 +318,9 @@ msgstr ""
 msgid "Width"
 msgstr ""
 
-#: widgets/AICImageComparisonWidget.php:150
-#: widgets/AICImageComparisonWidget.php:160
-#: widgets/AICImageComparisonWidget.php:170
-#: widgets/AICImageComparisonWidget.php:192
+#: widgets/AICImageComparisonWidget.php:151
+#: widgets/AICImageComparisonWidget.php:161
+#: widgets/AICImageComparisonWidget.php:171
+#: widgets/AICImageComparisonWidget.php:193
 msgid "yes"
 msgstr ""

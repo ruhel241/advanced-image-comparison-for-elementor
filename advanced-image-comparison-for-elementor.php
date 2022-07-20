@@ -131,7 +131,24 @@ final class AdvancedImageComparison
 		if ( $this->is_compatible() ) {
 			add_action( 'elementor/init', [ $this, 'init' ] );
 		}
-
+	
+		add_action( 'admin_notices', [$this, 'aic_admin_Notice'] );
+	}
+	
+	public function aic_admin_Notice() {
+		//get the current screen
+		$screen = get_current_screen();
+		//Checks if settings updated 
+		if ( $screen->id == 'dashboard' ||  $screen->id == 'plugins' ) {
+			?>
+				<div class="notice notice-success is-dismissible">
+					<p>
+						<?php _e('Congratulations! you have installed "Advanced Image Comparison" for elementor plugin, Please rating this plugin.', 'aic'); ?>
+						<em><a href="https://wordpress.org/support/plugin/advanced-image-comparison-for-elementor/reviews/#new-post" target="_blank">Rating</a></em>
+					</p>
+				</div>
+			<?php
+		}
 	}
 
 
