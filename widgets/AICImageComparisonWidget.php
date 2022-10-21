@@ -53,6 +53,9 @@ class AICImageComparisonWidget extends Widget_Base
                     'type'        => Controls_Manager::TEXT,
                     'default'     => 'Before',
                     'title'       => esc_html__( 'before image label', 'aic' ),
+                    'dynamic' => [
+                        'active' => true,
+                    ]
                 ]
             );
             $this->add_control(
@@ -64,6 +67,9 @@ class AICImageComparisonWidget extends Widget_Base
                     'default'     => 'Before image alt',
                     'placeholder' => __( 'Add alt tag', 'aic' ),
                     'title'       => esc_html__( 'Add before image Alt Tag', 'aic' ),
+                    'dynamic' => [
+                        'active' => true,
+                    ]
                 ]
             );
             $this->add_control(
@@ -73,6 +79,9 @@ class AICImageComparisonWidget extends Widget_Base
                     'type'    => Controls_Manager::MEDIA,
                     'default' => [
                         'url' => Utils::get_placeholder_image_src(),
+                    ],
+                    'dynamic' => [
+                        'active' => true,
                     ]
                 ]
             );
@@ -84,7 +93,10 @@ class AICImageComparisonWidget extends Widget_Base
                     // 'label_block' => true,
                     'default'     => 'After',
                     'title'       => esc_html__( 'After image label', 'aic' ),
-                    'separator'  => 'before'
+                    'separator'  => 'before',
+                    'dynamic' => [
+                        'active' => true,
+                    ]
                 ]
             );
             $this->add_control(
@@ -96,6 +108,9 @@ class AICImageComparisonWidget extends Widget_Base
                     'default'     => 'After image alt',
                     'placeholder' => __( 'Add alt tag', 'aic' ),
                     'title'       => esc_html__( 'After image Alt Tag', 'aic' ),
+                    'dynamic' => [
+                        'active' => true,
+                    ]
                 ]
             );
             $this->add_control(
@@ -106,6 +121,9 @@ class AICImageComparisonWidget extends Widget_Base
                     'default' => [
                         'url' => Utils::get_placeholder_image_src(),
                     ],
+                    'dynamic' => [
+                        'active' => true,
+                    ]
                 ]
             );
         $this->end_controls_section();

@@ -3,8 +3,8 @@ Contributors: ruhel241
 Tags:  before after image comparison slider, Elementor, Image Comparison, after, before.
 Requires at least: 4.5
 Requires PHP: 7.0 or greater
-Tested up to: 6.0.1
-Stable tag: 2.0.0
+Tested up to: 6.0.3
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,6 +77,9 @@ Yes you can style color and background type, border radius box shadow.
 
 
 == Changelog ==
+
+= 2.0.1 =
+* Added Elementor Dynamic content options
 
 = 2.0.0 =
 * Compatible WordPress 6.0.1 Latest version

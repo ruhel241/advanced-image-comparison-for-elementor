@@ -3,7 +3,7 @@
  * Plugin Name: Advanced Image Comparison for Elementor
  * Description: Advanced Image Comparison for elementor wordpress plugin
  * Plugin URI:  https://github.com/ruhel241/advanced-image-comparison
- * Version:     2.0.0
+ * Version:     2.0.1
  * Author:      Md.Ruhel Khan
  * Author URI:  https://github.com/ruhel241/
  * Text Domain: aic
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * The main class that initiates and runs the plugin.
  *
- * @since 2.0.0
+ * @since 2.0.1
  */
 final class AdvancedImageComparison 
 {
@@ -26,16 +26,16 @@ final class AdvancedImageComparison
 	/**
 	 * Plugin Version
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '2.0.0';
+	const VERSION = '2.0.1';
 
 	/**
 	 * Minimum Elementor Version
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @var string Minimum Elementor version required to run the plugin.
 	 */
@@ -44,7 +44,7 @@ final class AdvancedImageComparison
 	/**
 	 * Minimum PHP Version
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @var string Minimum PHP version required to run the plugin.
 	 */
@@ -53,7 +53,7 @@ final class AdvancedImageComparison
 	/**
 	 * Instance
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access private
 	 * @static
@@ -68,7 +68,7 @@ final class AdvancedImageComparison
 	 *
 	 * Ensures only one instance of the class is loaded or can be loaded.
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 * @static
@@ -88,7 +88,7 @@ final class AdvancedImageComparison
 	/**
 	 * Constructor
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 */
@@ -105,7 +105,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `init` action hook.
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 */
@@ -122,7 +122,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 */
@@ -158,7 +158,7 @@ final class AdvancedImageComparison
 	 * Checks if the installed version of Elementor meets the plugin's minimum requirement.
 	 * Checks if the installed PHP version meets the plugin's minimum requirement.
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 */
@@ -194,7 +194,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 */
@@ -223,7 +223,7 @@ final class AdvancedImageComparison
 	 *
 	 * Include widgets files and register them
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 */
@@ -247,7 +247,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have Elementor installed or activated.
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 */
@@ -271,7 +271,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have a minimum required Elementor version.
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 */
@@ -296,7 +296,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have a minimum required PHP version.
 	 *
-	 * @since 2.0.0
+	 * @since 2.0.1
 	 *
 	 * @access public
 	 */
