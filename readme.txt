@@ -1,13 +1,12 @@
 === Advanced Image Comparison for Elementor ===
-Contributors: ruhel241
+Contributors: ruhel241, wpcreativeidea
 Tags:  before after image comparison slider, Elementor, Image Comparison, after, before.
 Requires at least: 4.5
 Requires PHP: 7.0 or greater
-Tested up to: 6.0.3
-Stable tag: 2.0.1
+Tested up to: 6.2.2
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
 
 == Description ==
 
@@ -16,7 +15,6 @@ You can comparison your image. Comparison before image and after image. You can 
 Customize image container, image radius, image border. Label customizing text color, background color border radius etc.
 You can set image overlay. Divider width, color. Handle color, background color, border radius etc. 
 Additional options image visibility set, layout, move slider on click, move slider on hover, image overlay.
-
 
 == Features ==  
 
@@ -31,7 +29,6 @@ Additional options image visibility set, layout, move slider on click, move slid
 * Image Overlay
 * Divider
 * Styling options etc
-
 
 == Installation ==
 
@@ -64,7 +61,6 @@ Yes you can style color and width.
 = Can I Styling Handle =
 Yes you can style color and background type, border radius box shadow.
 
-
 == Screenshots ==
 
 1. Vertical Layout
@@ -75,8 +71,10 @@ Yes you can style color and background type, border radius box shadow.
 6. Frontend Room view
 7. Frontend Image view
 
-
 == Changelog ==
+
+= 2.0.2 =
+* WordPress Version 6.2.2 Compatible 
 
 = 2.0.1 =
 * Added Elementor Dynamic content options

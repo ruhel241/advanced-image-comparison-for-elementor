@@ -20,7 +20,7 @@ class AICImageComparisonWidget extends Widget_Base
 
     public function get_title() 
     {
-        return __( 'Advanced Image Comparison', 'aic' );
+        return __( 'Advanced Image Comparison', 'advanced-image-comparison-for-elementor' );
     }
 
     public function get_icon() 
@@ -42,17 +42,17 @@ class AICImageComparisonWidget extends Widget_Base
         $this->start_controls_section(
             'aic_image_comparison',
             [
-                'label' => esc_html__( 'Image Comparison', 'aic' ),
+                'label' => esc_html__( 'Image Comparison', 'advanced-image-comparison-for-elementor' ),
                 'tab' => Controls_Manager::TAB_CONTENT
             ]
         );
             $this->add_control(
                 'aic_before_image_label',
                 [
-                    'label'       => esc_html__( 'Label Before', 'aic' ),
+                    'label'       => esc_html__( 'Label Before', 'advanced-image-comparison-for-elementor' ),
                     'type'        => Controls_Manager::TEXT,
                     'default'     => 'Before',
-                    'title'       => esc_html__( 'before image label', 'aic' ),
+                    'title'       => esc_html__( 'before image label', 'advanced-image-comparison-for-elementor' ),
                     'dynamic' => [
                         'active' => true,
                     ]
@@ -61,12 +61,12 @@ class AICImageComparisonWidget extends Widget_Base
             $this->add_control(
                 'aic_before_image_alt',
                 [
-                    'label'       => esc_html__( 'Before Image Alt Tag', 'aic' ),
+                    'label'       => esc_html__( 'Before Image Alt Tag', 'advanced-image-comparison-for-elementor' ),
                     'type'        => Controls_Manager::TEXT,
                     // 'label_block' => true,
                     'default'     => 'Before image alt',
-                    'placeholder' => __( 'Add alt tag', 'aic' ),
-                    'title'       => esc_html__( 'Add before image Alt Tag', 'aic' ),
+                    'placeholder' => __( 'Add alt tag', 'advanced-image-comparison-for-elementor' ),
+                    'title'       => esc_html__( 'Add before image Alt Tag', 'advanced-image-comparison-for-elementor' ),
                     'dynamic' => [
                         'active' => true,
                     ]
@@ -75,7 +75,7 @@ class AICImageComparisonWidget extends Widget_Base
             $this->add_control(
                 'aic_before_image',
                 [
-                    'label'   => esc_html__( 'Choose Before Image', 'aic' ),
+                    'label'   => esc_html__( 'Choose Before Image', 'advanced-image-comparison-for-elementor' ),
                     'type'    => Controls_Manager::MEDIA,
                     'default' => [
                         'url' => Utils::get_placeholder_image_src(),
@@ -88,11 +88,11 @@ class AICImageComparisonWidget extends Widget_Base
             $this->add_control(
                 'aic_after_image_label',
                 [
-                    'label'       => esc_html__( 'Label After', 'aic' ),
+                    'label'       => esc_html__( 'Label After', 'advanced-image-comparison-for-elementor' ),
                     'type'        => Controls_Manager::TEXT,
                     // 'label_block' => true,
                     'default'     => 'After',
-                    'title'       => esc_html__( 'After image label', 'aic' ),
+                    'title'       => esc_html__( 'After image label', 'advanced-image-comparison-for-elementor' ),
                     'separator'  => 'before',
                     'dynamic' => [
                         'active' => true,
@@ -102,12 +102,12 @@ class AICImageComparisonWidget extends Widget_Base
             $this->add_control(
                 'aic_after_image_alt',
                 [
-                    'label'       => esc_html__( 'After Image Alt Tag', 'aic' ),
+                    'label'       => esc_html__( 'After Image Alt Tag', 'advanced-image-comparison-for-elementor' ),
                     'type'        => Controls_Manager::TEXT,
                     // 'label_block' => true,
                     'default'     => 'After image alt',
-                    'placeholder' => __( 'Add alt tag', 'aic' ),
-                    'title'       => esc_html__( 'After image Alt Tag', 'aic' ),
+                    'placeholder' => __( 'Add alt tag', 'advanced-image-comparison-for-elementor' ),
+                    'title'       => esc_html__( 'After image Alt Tag', 'advanced-image-comparison-for-elementor' ),
                     'dynamic' => [
                         'active' => true,
                     ]
@@ -116,7 +116,7 @@ class AICImageComparisonWidget extends Widget_Base
             $this->add_control(
                 'aic_after_image',
                 [
-                    'label'   => esc_html__( 'Choose After Image', 'aic' ),
+                    'label'   => esc_html__( 'Choose After Image', 'advanced-image-comparison-for-elementor' ),
                     'type'    => Controls_Manager::MEDIA,
                     'default' => [
                         'url' => Utils::get_placeholder_image_src(),
@@ -134,14 +134,14 @@ class AICImageComparisonWidget extends Widget_Base
         $this->start_controls_section(
             'aic_image_additional_options',
             [
-                'label' => esc_html__( 'Additional Options', 'aic' ),
+                'label' => esc_html__( 'Additional Options', 'advanced-image-comparison-for-elementor' ),
                 'tab' => Controls_Manager::TAB_CONTENT
             ]
         );
             $this->add_control(
                 'aic_image_visibility',
                 [
-                    'label'      => esc_html__( 'Image Visibility', 'aic' ),
+                    'label'      => esc_html__( 'Image Visibility', 'advanced-image-comparison-for-elementor' ),
                     'type'       => Controls_Manager::SLIDER,
                     'size_units' => ['%', ''],
                     'range'      => ['%' => ['min' => 0, 'max' => 100]],
@@ -151,11 +151,11 @@ class AICImageComparisonWidget extends Widget_Base
             $this->add_control(
                 'aic_image_orientation',
                 [
-                    'label'   => esc_html__( 'Layout', 'aic' ),
+                    'label'   => esc_html__( 'Layout', 'advanced-image-comparison-for-elementor' ),
                     'type'    => Controls_Manager::SELECT,
                     'options' => [
-                        'horizontal' => esc_html__( 'Horizontal', 'aic' ),
-                        'vertical'   => esc_html__( 'Vertical', 'aic' ),
+                        'horizontal' => esc_html__( 'Horizontal', 'advanced-image-comparison-for-elementor' ),
+                        'vertical'   => esc_html__( 'Vertical', 'advanced-image-comparison-for-elementor' ),
                     ],
                     'default' => 'horizontal',  
                 ]
@@ -163,30 +163,30 @@ class AICImageComparisonWidget extends Widget_Base
             $this->add_control(
                 'aic_image_click_to_move',
                 [
-                    'label'     => esc_html__( 'Move Slider On Click', 'aic' ),
+                    'label'     => esc_html__( 'Move Slider On Click', 'advanced-image-comparison-for-elementor' ),
                     'type'      => Controls_Manager::SWITCHER,
-                    'label_on'  => __( 'yes', 'aic' ),
-                    'label_off' => __( 'no', 'aic' ),
+                    'label_on'  => __( 'yes', 'advanced-image-comparison-for-elementor' ),
+                    'label_off' => __( 'no', 'advanced-image-comparison-for-elementor' ),
                     'default'   => 'no',
                 ]
             );
             $this->add_control(
                 'aic_image_move_slider_on_hover',
                 [
-                    'label'     => esc_html__( 'Move Slider On Hover', 'aic' ),
+                    'label'     => esc_html__( 'Move Slider On Hover', 'advanced-image-comparison-for-elementor' ),
                     'type'      => Controls_Manager::SWITCHER,
-                    'label_on'  => __( 'yes', 'aic' ),
-                    'label_off' => __( 'no', 'aic' ),
+                    'label_on'  => __( 'yes', 'advanced-image-comparison-for-elementor' ),
+                    'label_off' => __( 'no', 'advanced-image-comparison-for-elementor' ),
                     'default'   => 'yes',
                 ]
             );
             $this->add_control(
                 'aic_image_overlay',
                 [
-                    'label'     => esc_html__( 'Image Overlay ?', 'aic' ),
+                    'label'     => esc_html__( 'Image Overlay ?', 'advanced-image-comparison-for-elementor' ),
                     'type'      => Controls_Manager::SWITCHER,
-                    'label_on'  => __( 'yes', 'aic' ),
-                    'label_off' => __( 'no', 'aic' ),
+                    'label_on'  => __( 'yes', 'advanced-image-comparison-for-elementor' ),
+                    'label_off' => __( 'no', 'advanced-image-comparison-for-elementor' ),
                     'default'   => 'no',
                 ]
             );
@@ -198,24 +198,24 @@ class AICImageComparisonWidget extends Widget_Base
         $this->start_controls_section(
             'aic_image_container_section',
             [
-                'label' => esc_html__( 'Image Container', 'aic' ),
+                'label' => esc_html__( 'Image Container', 'advanced-image-comparison-for-elementor' ),
                 'tab' => Controls_Manager::TAB_STYLE
             ]
         );
             $this->add_control(
                 'aic_image_container_width',
                 [
-                    'label'     => esc_html__( 'Set max width for the container?', 'aic' ),
+                    'label'     => esc_html__( 'Set max width for the container?', 'advanced-image-comparison-for-elementor' ),
                     'type'      => Controls_Manager::SWITCHER,
-                    'label_on'  => __( 'yes', 'aic' ),
-                    'label_off' => __( 'no', 'aic' ),
+                    'label_on'  => __( 'yes', 'advanced-image-comparison-for-elementor' ),
+                    'label_off' => __( 'no', 'advanced-image-comparison-for-elementor' ),
                     'default'   => 'yes',
                 ]
             );
             $this->add_responsive_control(
                 'aic_image_container_width_value',
                 [
-                    'label'      => __( 'Container Max Width', 'aic' ),
+                    'label'      => __( 'Container Max Width', 'advanced-image-comparison-for-elementor' ),
                     'type'       => Controls_Manager::SLIDER,
                     'default'    => [
                         'size' => 80,
@@ -250,7 +250,7 @@ class AICImageComparisonWidget extends Widget_Base
             $this->add_control(
                 'aic_image_comparisan_border_radius',
                 [
-                    'label'     => esc_html__( 'Border Radius', 'aic' ),
+                    'label'     => esc_html__( 'Border Radius', 'advanced-image-comparison-for-elementor' ),
                     'type'      =>  Controls_Manager::SLIDER,
                     'size_units' => ['px', ''],
                     'range'     => [
@@ -272,14 +272,14 @@ class AICImageComparisonWidget extends Widget_Base
         $this->start_controls_section(
             'aic_label_section',
             [
-                'label' => __( 'Label', 'aic' ),
+                'label' => __( 'Label', 'advanced-image-comparison-for-elementor' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
             $this->add_responsive_control(
                 'aic_label_align',
                 [
-                    'label'      => __( 'Align', 'aic' ),
+                    'label'      => __( 'Align', 'advanced-image-comparison-for-elementor' ),
                     'type'       => Controls_Manager::SLIDER,
                     'size_units' => ['px', '%'],
                     'range'      => [
@@ -299,13 +299,13 @@ class AICImageComparisonWidget extends Widget_Base
                 $this->start_controls_tab(
                     'aic_tab_label_before',
                     [
-                        'label' => __( 'Before', 'aic' ),
+                        'label' => __( 'Before', 'advanced-image-comparison-for-elementor' ),
                     ]
                 );
                     $this->add_control(
                         'aic_label_text_color_before',
                         [
-                            'label'     => __( 'Text Color', 'aic' ),
+                            'label'     => __( 'Text Color', 'advanced-image-comparison-for-elementor' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'   => '',
                             'selectors' => [
@@ -316,7 +316,7 @@ class AICImageComparisonWidget extends Widget_Base
                     $this->add_control(
                         'aic_label_bg_color_before',
                         [
-                            'label'     => __( 'Background Color', 'aic' ),
+                            'label'     => __( 'Background Color', 'advanced-image-comparison-for-elementor' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'   => '',
                             'selectors' => [
@@ -328,7 +328,7 @@ class AICImageComparisonWidget extends Widget_Base
                         Group_Control_Border::get_type(),
                         [
                             'name'        => 'aic_label_border',
-                            'label'       => __( 'Border', 'aic' ),
+                            'label'       => __( 'Border', 'advanced-image-comparison-for-elementor' ),
                             'placeholder' => '1px',
                             'default'     => '1px',
                             'selector'    => '{{WRAPPER}} .aic-image-container .twentytwenty-before-label:before',
@@ -337,7 +337,7 @@ class AICImageComparisonWidget extends Widget_Base
                     $this->add_control(
                         'aic_label_border_radius',
                         [
-                            'label'      => __( 'Border Radius', 'aic' ),
+                            'label'      => __( 'Border Radius', 'advanced-image-comparison-for-elementor' ),
                             'type'       => Controls_Manager::DIMENSIONS,
                             'size_units' => ['px', '%'],
                             'selectors'  => [
@@ -350,13 +350,13 @@ class AICImageComparisonWidget extends Widget_Base
                 $this->start_controls_tab(
                     'aic_tab_label_after',
                     [
-                        'label' => __( 'After', 'aic' ),
+                        'label' => __( 'After', 'advanced-image-comparison-for-elementor' ),
                     ]
                 );
                     $this->add_control(
                         'aic_label_text_color_after',
                         [
-                            'label'     => __( 'Text Color', 'aic' ),
+                            'label'     => __( 'Text Color', 'advanced-image-comparison-for-elementor' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'   => '',
                             'selectors' => [
@@ -367,7 +367,7 @@ class AICImageComparisonWidget extends Widget_Base
                     $this->add_control(
                         'aic_label_bg_color_after',
                         [
-                            'label'     => __( 'Background Color', 'aic' ),
+                            'label'     => __( 'Background Color', 'advanced-image-comparison-for-elementor' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'   => '',
                             'selectors' => [
@@ -379,7 +379,7 @@ class AICImageComparisonWidget extends Widget_Base
                         Group_Control_Border::get_type(),
                         [
                             'name'        => 'label_border_after',
-                            'label'       => __( 'Border', 'aic' ),
+                            'label'       => __( 'Border', 'advanced-image-comparison-for-elementor' ),
                             'placeholder' => '1px',
                             'default'     => '1px',
                             'selector'    => '{{WRAPPER}} .aic-image-container .twentytwenty-after-label:before',
@@ -388,7 +388,7 @@ class AICImageComparisonWidget extends Widget_Base
                     $this->add_control(
                         'aic_label_border_radius_after',
                         [
-                            'label'      => __( 'Border Radius', 'aic' ),
+                            'label'      => __( 'Border Radius', 'advanced-image-comparison-for-elementor' ),
                             'type'       => Controls_Manager::DIMENSIONS,
                             'size_units' => ['px', '%'],
                             'selectors'  => [
@@ -403,14 +403,14 @@ class AICImageComparisonWidget extends Widget_Base
                 Group_Control_Typography::get_type(),
                 [
                     'name'      => 'aic_label_typography',
-                    'label'     => __( 'Typography', 'aic' ),
+                    'label'     => __( 'Typography', 'advanced-image-comparison-for-elementor' ),
                     'selector'  => '{{WRAPPER}} .aic-image-container .twentytwenty-before-label:before, {{WRAPPER}} .aic-image-container .twentytwenty-after-label:before',
                 ]
             );
             $this->add_responsive_control(
                 'aic_label_padding',
                 [
-                    'label'      => __( 'Padding', 'aic' ),
+                    'label'      => __( 'Padding', 'advanced-image-comparison-for-elementor' ),
                     'type'       => Controls_Manager::DIMENSIONS,
                     'size_units' => ['px','%'],
                     'selectors'  => [
@@ -427,7 +427,7 @@ class AICImageComparisonWidget extends Widget_Base
         $this->start_controls_section(
             'aic_overlay_section',
             [
-                'label'     => __( 'Overlay', 'aic' ),
+                'label'     => __( 'Overlay', 'advanced-image-comparison-for-elementor' ),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'aic_image_overlay' => 'yes',
@@ -438,7 +438,7 @@ class AICImageComparisonWidget extends Widget_Base
                 Group_Control_Background::get_type(),
                 [
                     'name'     => 'aic_image_comparison_overlay_background',
-                    'label'    => __( 'Background', 'aic' ),
+                    'label'    => __( 'Background', 'advanced-image-comparison-for-elementor' ),
                     'types'    => ['classic', 'gradient'],
                     'selector' => '{{WRAPPER}} .aic-image-container .twentytwenty-overlay:hover',
                 ]
@@ -451,14 +451,14 @@ class AICImageComparisonWidget extends Widget_Base
         $this->start_controls_section(
             'aic_divider_section',
             [
-                'label' => __( 'Divider', 'aic' ),
+                'label' => __( 'Divider', 'advanced-image-comparison-for-elementor' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
             $this->add_control(
                 'aic_divider_color',
                 [
-                    'label'     => __( 'Color', 'aic' ),
+                    'label'     => __( 'Color', 'advanced-image-comparison-for-elementor' ),
                     'type'      => Controls_Manager::COLOR,
                     'default'   => '',
                     'selectors' => [
@@ -472,7 +472,7 @@ class AICImageComparisonWidget extends Widget_Base
             $this->add_responsive_control(
                 'aic_divider_width',
                 [
-                    'label'          => __( 'Width', 'aic' ),
+                    'label'          => __( 'Width', 'advanced-image-comparison-for-elementor' ),
                     'type'           => Controls_Manager::SLIDER,
                     'default'        => [
                         'size' => 3,
@@ -507,7 +507,7 @@ class AICImageComparisonWidget extends Widget_Base
         $this->start_controls_section(
             'aic_handle_section',
             [
-                'label' => __( 'Handle', 'aic' ),
+                'label' => __( 'Handle', 'advanced-image-comparison-for-elementor' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -515,13 +515,13 @@ class AICImageComparisonWidget extends Widget_Base
                 $this->start_controls_tab(
                     'aic_tab_handle_normal',
                     [
-                        'label' => __( 'Normal', 'aic' ),
+                        'label' => __( 'Normal', 'advanced-image-comparison-for-elementor' ),
                     ]
                 );
                     $this->add_control(
                         'aic_handle_icon_color',
                         [
-                            'label'     => __( 'Icon Color', 'aic' ),
+                            'label'     => __( 'Icon Color', 'advanced-image-comparison-for-elementor' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'   => '',
                             'selectors' => [
@@ -542,7 +542,7 @@ class AICImageComparisonWidget extends Widget_Base
                         Group_Control_Border::get_type(),
                         [
                             'name'        => 'aic_handle_border',
-                            'label'       => __( 'Border', 'aic' ),
+                            'label'       => __( 'Border', 'advanced-image-comparison-for-elementor' ),
                             'placeholder' => '1px',
                             'default'     => '1px',
                             'selector'    => '{{WRAPPER}} .aic-image-container .twentytwenty-handle',
@@ -552,7 +552,7 @@ class AICImageComparisonWidget extends Widget_Base
                     $this->add_control(
                         'aic_handle_border_radius',
                         [
-                            'label'      => __( 'Border Radius', 'aic' ),
+                            'label'      => __( 'Border Radius', 'advanced-image-comparison-for-elementor' ),
                             'type'       => Controls_Manager::DIMENSIONS,
                             'size_units' => ['px', '%'],
                             'selectors'  => [
@@ -572,13 +572,13 @@ class AICImageComparisonWidget extends Widget_Base
                 $this->start_controls_tab(
                     'aic_tab_handle_hover',
                     [
-                        'label' => __( 'Hover', 'aic' ),
+                        'label' => __( 'Hover', 'advanced-image-comparison-for-elementor' ),
                     ]
                 );
                     $this->add_control(
                         'aic_handle_icon_color_hover',
                         [
-                            'label'     => __( 'Icon Color', 'aic' ),
+                            'label'     => __( 'Icon Color', 'advanced-image-comparison-for-elementor' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'   => '',
                             'selectors' => [
@@ -598,7 +598,7 @@ class AICImageComparisonWidget extends Widget_Base
                     $this->add_control(
                         'aic_handle_border_color_hover',
                         [
-                            'label'     => __( 'Border Color', 'aic' ),
+                            'label'     => __( 'Border Color', 'advanced-image-comparison-for-elementor' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'   => '',
                             'selectors' => [
@@ -616,7 +616,7 @@ class AICImageComparisonWidget extends Widget_Base
         $this->start_controls_section(
             'aic_image_overlay_section',
             [
-                'label'     => __( 'Image Filter', 'aic' ),
+                'label'     => __( 'Image Filter', 'advanced-image-comparison-for-elementor' ),
                 'tab'       => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -624,25 +624,25 @@ class AICImageComparisonWidget extends Widget_Base
                 $this->start_controls_tab(
                     'aic_tab_before_image_filter',
                     [
-                        'label' => __( 'Before', 'aic' ),
+                        'label' => __( 'Before', 'advanced-image-comparison-for-elementor' ),
                     ]
                 );
                     $this->add_control(
                         'aic_before_image_filter',
                         [
-                            'label'   => esc_html__( 'Befor Image Filter', 'aic' ),
+                            'label'   => esc_html__( 'Befor Image Filter', 'advanced-image-comparison-for-elementor' ),
                             'type'    => Controls_Manager::SELECT,
                             'options' => [
-                                '' => esc_html__( 'None', 'aic' ),
-                                'blur(4px)' => esc_html__( 'Blur', 'aic' ),
-                                'brightness(0.30)' => esc_html__( 'Brightness', 'aic' ),
-                                'contrast(180%)'   => esc_html__( 'Contrast', 'aic' ),
-                                'grayscale(100%)'  => esc_html__( 'Grayscale', 'aic' ),
-                                'hue-rotate(180deg)'=> esc_html__( 'Hue Rotate', 'aic' ),
-                                'invert(100%)'   => esc_html__( 'Invert', 'aic' ),
-                                'opacity(50%)'   => esc_html__( 'Opacity', 'aic' ),
-                                'saturate(7)'   => esc_html__( 'Saturate', 'aic' ),
-                                'sepia(100%)'   => esc_html__( 'Sepia', 'aic' ),
+                                '' => esc_html__( 'None', 'advanced-image-comparison-for-elementor' ),
+                                'blur(4px)' => esc_html__( 'Blur', 'advanced-image-comparison-for-elementor' ),
+                                'brightness(0.30)' => esc_html__( 'Brightness', 'advanced-image-comparison-for-elementor' ),
+                                'contrast(180%)'   => esc_html__( 'Contrast', 'advanced-image-comparison-for-elementor' ),
+                                'grayscale(100%)'  => esc_html__( 'Grayscale', 'advanced-image-comparison-for-elementor' ),
+                                'hue-rotate(180deg)'=> esc_html__( 'Hue Rotate', 'advanced-image-comparison-for-elementor' ),
+                                'invert(100%)'   => esc_html__( 'Invert', 'advanced-image-comparison-for-elementor' ),
+                                'opacity(50%)'   => esc_html__( 'Opacity', 'advanced-image-comparison-for-elementor' ),
+                                'saturate(7)'   => esc_html__( 'Saturate', 'advanced-image-comparison-for-elementor' ),
+                                'sepia(100%)'   => esc_html__( 'Sepia', 'advanced-image-comparison-for-elementor' ),
                             ],
                             'default' => '',
                             'selectors'  => [
@@ -655,25 +655,25 @@ class AICImageComparisonWidget extends Widget_Base
                     $this->start_controls_tab(
                         'aic_tab_after_image_filter',
                         [
-                            'label' => __( 'After', 'aic' ),
+                            'label' => __( 'After', 'advanced-image-comparison-for-elementor' ),
                         ]
                     );
                     $this->add_control(
                         'aic_after_image_filter',
                         [
-                            'label'   => esc_html__( 'After Image Filter', 'aic' ),
+                            'label'   => esc_html__( 'After Image Filter', 'advanced-image-comparison-for-elementor' ),
                             'type'    => Controls_Manager::SELECT,
                             'options' => [
-                                '' => esc_html__( 'None', 'aic' ),
-                                'blur(4px)' => esc_html__( 'Blur', 'aic' ),
-                                'brightness(0.30)' => esc_html__( 'Brightness', 'aic' ),
-                                'contrast(180%)'   => esc_html__( 'Contrast', 'aic' ),
-                                'grayscale(100%)'  => esc_html__( 'Grayscale', 'aic' ),
-                                'hue-rotate(180deg)'=> esc_html__( 'Hue Rotate', 'aic' ),
-                                'invert(100%)'   => esc_html__( 'Invert', 'aic' ),
-                                'opacity(50%)'   => esc_html__( 'Opacity', 'aic' ),
-                                'saturate(7)'   => esc_html__( 'Saturate', 'aic' ),
-                                'sepia(100%)'   => esc_html__( 'Sepia', 'aic' ),
+                                '' => esc_html__( 'None', 'advanced-image-comparison-for-elementor' ),
+                                'blur(4px)' => esc_html__( 'Blur', 'advanced-image-comparison-for-elementor' ),
+                                'brightness(0.30)' => esc_html__( 'Brightness', 'advanced-image-comparison-for-elementor' ),
+                                'contrast(180%)'   => esc_html__( 'Contrast', 'advanced-image-comparison-for-elementor' ),
+                                'grayscale(100%)'  => esc_html__( 'Grayscale', 'advanced-image-comparison-for-elementor' ),
+                                'hue-rotate(180deg)'=> esc_html__( 'Hue Rotate', 'advanced-image-comparison-for-elementor' ),
+                                'invert(100%)'   => esc_html__( 'Invert', 'advanced-image-comparison-for-elementor' ),
+                                'opacity(50%)'   => esc_html__( 'Opacity', 'advanced-image-comparison-for-elementor' ),
+                                'saturate(7)'   => esc_html__( 'Saturate', 'advanced-image-comparison-for-elementor' ),
+                                'sepia(100%)'   => esc_html__( 'Sepia', 'advanced-image-comparison-for-elementor' ),
                             ],
                             'default' => 'grayscale(100%)',
                             'selectors'  => [

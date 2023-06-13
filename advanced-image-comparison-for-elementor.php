@@ -2,12 +2,17 @@
 /**
  * Plugin Name: Advanced Image Comparison for Elementor
  * Description: Advanced Image Comparison for elementor wordpress plugin
- * Plugin URI:  https://github.com/ruhel241/advanced-image-comparison
- * Version:     2.0.1
+ * Plugin URI:  https://wpcreativeidea.com/
+ * Version:     2.0.2
  * Author:      Md.Ruhel Khan
- * Author URI:  https://github.com/ruhel241/
- * Text Domain: aic
+ * Author URI:  https://wpcreativeidea.com/home
+ * Text Domain: advanced-image-comparison-for-elementor
  */
+
+define('AIC_DIR_FILE', __FILE__);
+define('AIC_PLUGIN_URL', plugin_dir_url(__FILE__));
+define('AIC_LITE', 'advancedImageComparisonLite');
+define('AIC_PLUGIN_VERSION', '2.0.2');
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -18,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * The main class that initiates and runs the plugin.
  *
- * @since 2.0.1
+ * @since 2.0.2
  */
 final class AdvancedImageComparison 
 {
@@ -26,16 +31,16 @@ final class AdvancedImageComparison
 	/**
 	 * Plugin Version
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '2.0.1';
+	const VERSION = '2.0.2';
 
 	/**
 	 * Minimum Elementor Version
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @var string Minimum Elementor version required to run the plugin.
 	 */
@@ -44,7 +49,7 @@ final class AdvancedImageComparison
 	/**
 	 * Minimum PHP Version
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @var string Minimum PHP version required to run the plugin.
 	 */
@@ -53,7 +58,7 @@ final class AdvancedImageComparison
 	/**
 	 * Instance
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access private
 	 * @static
@@ -68,7 +73,7 @@ final class AdvancedImageComparison
 	 *
 	 * Ensures only one instance of the class is loaded or can be loaded.
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 * @static
@@ -88,7 +93,7 @@ final class AdvancedImageComparison
 	/**
 	 * Constructor
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 */
@@ -105,13 +110,13 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `init` action hook.
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 */
 	public function i18n() {
 
-		load_plugin_textdomain( 'aic' );
+		load_plugin_textdomain( 'advanced-image-comparison-for-elementor' );
 	}
 
 	/**
@@ -122,7 +127,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 */
@@ -143,7 +148,7 @@ final class AdvancedImageComparison
 			?>
 				<div class="notice notice-success is-dismissible">
 					<p>
-						<?php _e('Congratulations! you have installed "Advanced Image Comparison" for elementor plugin, Please rating this plugin.', 'aic'); ?>
+						<?php _e('Congratulations! you have installed "Advanced Image Comparison" for elementor plugin, Please rating this plugin.', 'advanced-image-comparison-for-elementor'); ?>
 						<em><a href="https://wordpress.org/support/plugin/advanced-image-comparison-for-elementor/reviews/#new-post" target="_blank">Rating</a></em>
 					</p>
 				</div>
@@ -158,7 +163,7 @@ final class AdvancedImageComparison
 	 * Checks if the installed version of Elementor meets the plugin's minimum requirement.
 	 * Checks if the installed PHP version meets the plugin's minimum requirement.
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 */
@@ -194,7 +199,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 */
@@ -206,15 +211,15 @@ final class AdvancedImageComparison
 		add_action( 'elementor/widgets/register', [ $this, 'init_widgets' ] );
 		
 		add_action('elementor/frontend/after_enqueue_styles', function() {
-			wp_enqueue_style( 'aic-image-comparison', plugin_dir_url( __FILE__ ). 'assets/css/aic_image_comparison.css');
-			wp_enqueue_style( 'aic-twentytwenty', plugin_dir_url( __FILE__ ). 'assets/css/twentytwenty.css');
+			wp_enqueue_style( 'aic-image-comparison', plugin_dir_url( __FILE__ ). 'assets/css/aic_image_comparison.css', array(), AIC_PLUGIN_VERSION);
+			wp_enqueue_style( 'aic-twentytwenty', plugin_dir_url( __FILE__ ). 'assets/css/twentytwenty.css', array(), AIC_PLUGIN_VERSION);
 		});
 
 		// after_enqueue_scripts
 		add_action('elementor/frontend/after_enqueue_scripts', function() {
-			wp_enqueue_script( 'aic-move-js', plugin_dir_url( __FILE__ ). 'assets/js/jquery.event.move.js', array('jquery'));
-			wp_enqueue_script( 'aic-twentytwenty-js', plugin_dir_url( __FILE__ ). 'assets/js/jquery.twentytwenty.js', array('jquery'));
-			wp_enqueue_script( 'aic-custom-js', plugin_dir_url( __FILE__ ). 'assets/js/custom.js', array('jquery'));
+			wp_enqueue_script( 'aic-move-js', plugin_dir_url( __FILE__ ). 'assets/js/jquery.event.move.js', array('jquery'), AIC_PLUGIN_VERSION);
+			wp_enqueue_script( 'aic-twentytwenty-js', plugin_dir_url( __FILE__ ). 'assets/js/jquery.twentytwenty.js', array('jquery'), AIC_PLUGIN_VERSION);
+			wp_enqueue_script( 'aic-custom-js', plugin_dir_url( __FILE__ ). 'assets/js/custom.js', array('jquery'), AIC_PLUGIN_VERSION);
 		});
 	}
 
@@ -223,7 +228,7 @@ final class AdvancedImageComparison
 	 *
 	 * Include widgets files and register them
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 */
@@ -238,7 +243,7 @@ final class AdvancedImageComparison
 
 	public function loadTextDomain()
     {
-        load_plugin_textdomain('aic', false, basename(dirname(__FILE__)) . '/languages');
+        load_plugin_textdomain('advanced-image-comparison-for-elementor', false, basename(dirname(__FILE__)) . '/languages');
 	}
 	
 	
@@ -247,7 +252,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have Elementor installed or activated.
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 */
@@ -257,9 +262,9 @@ final class AdvancedImageComparison
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
-			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'aic' ),
-			'<strong>' . esc_html__( 'Advanced Image Comparison', 'aic' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'aic' ) . '</strong>'
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'advanced-image-comparison-for-elementor' ),
+			'<strong>' . esc_html__( 'Advanced Image Comparison', 'advanced-image-comparison-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'advanced-image-comparison-for-elementor' ) . '</strong>'
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -271,7 +276,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have a minimum required Elementor version.
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 */
@@ -281,9 +286,9 @@ final class AdvancedImageComparison
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'aic' ),
-			'<strong>' . esc_html__( 'Advanced Image Comparison', 'aic' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'aic' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'advanced-image-comparison-for-elementor' ),
+			'<strong>' . esc_html__( 'Advanced Image Comparison', 'advanced-image-comparison-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'advanced-image-comparison-for-elementor' ) . '</strong>',
 			 self::MINIMUM_ELEMENTOR_VERSION
 		);
 
@@ -296,7 +301,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have a minimum required PHP version.
 	 *
-	 * @since 2.0.1
+	 * @since 2.0.2
 	 *
 	 * @access public
 	 */
@@ -306,9 +311,9 @@ final class AdvancedImageComparison
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'aic' ),
-			'<strong>' . esc_html__( 'Advanced Image Comparison', 'aic' ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', 'aic' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'advanced-image-comparison-for-elementor' ),
+			'<strong>' . esc_html__( 'Advanced Image Comparison', 'advanced-image-comparison-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'advanced-image-comparison-for-elementor' ) . '</strong>',
 			 self::MINIMUM_PHP_VERSION
 		);
 

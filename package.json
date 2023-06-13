@@ -1,7 +1,7 @@
 {
   "name": "advanced-image-comparison-for-elementor",
-  "version": "2.0.1",
-  "description": "Advanced Testimonial Carousel for Elementor WordPress Plugin",
+  "version": "2.0.2",
+  "description": "Advanced Image Comparison for Elementor WordPress Plugin",
   "main": "index.js",
   "dependencies": {
     "laravel-mix": "^6.0.13",
@@ -21,13 +21,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruhel241/advanced-testimonial-carousel.git"
+    "url": "git+https://github.com/ruhel241/advanced-image-comparison-for-elementor.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ruhel241/advanced-testimonial-carousel/issues"
+    "url": "https://github.com/ruhel241/advanced-image-comparison-for-elementor/issues"
   },
-  "homepage": "https://github.com/ruhel241/advanced-testimonial-carousel#readme"
+  "homepage": "https://github.com/ruhel241/advanced-image-comparison-for-elementor#readme"
 }
