@@ -2,11 +2,13 @@
 Contributors: ruhel241, wpcreativeidea
 Tags:  before after image comparison slider, Elementor, Image Comparison, after, before.
 Requires at least: 4.5
-Requires PHP: 7.0 or greater
-Tested up to: 6.2.2
-Stable tag: 2.0.2
+Requires PHP: 7.0
+Tested up to: 6.6.1
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Advanced Image Comparison is a fully Responsive, you can add before image and after image. 
 
 == Description ==
 
@@ -72,6 +74,9 @@ Yes you can style color and background type, border radius box shadow.
 7. Frontend Image view
 
 == Changelog ==
+
+= 2.0.3 =
+* WordPress Version 6.6.1 Compatible 
 
 = 2.0.2 =
 * WordPress Version 6.2.2 Compatible 

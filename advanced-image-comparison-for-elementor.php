@@ -2,17 +2,19 @@
 /**
  * Plugin Name: Advanced Image Comparison for Elementor
  * Description: Advanced Image Comparison for elementor wordpress plugin
- * Plugin URI:  https://wpcreativeidea.com/
- * Version:     2.0.2
- * Author:      Md.Ruhel Khan
+ * Version:     2.0.3
+ * Author:      WPCreativeIdea
  * Author URI:  https://wpcreativeidea.com/home
+ * Plugin URI: https://wpcreativeidea.com/image-comparison
+ * License: GPLv2 or later
  * Text Domain: advanced-image-comparison-for-elementor
- */
+ * Domain Path: /languages
+*/
 
 define('AIC_DIR_FILE', __FILE__);
 define('AIC_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('AIC_LITE', 'advancedImageComparisonLite');
-define('AIC_PLUGIN_VERSION', '2.0.2');
+define('AIC_PLUGIN_VERSION', '2.0.3');
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -23,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * The main class that initiates and runs the plugin.
  *
- * @since 2.0.2
+ * @since 2.0.3
  */
 final class AdvancedImageComparison 
 {
@@ -31,16 +33,16 @@ final class AdvancedImageComparison
 	/**
 	 * Plugin Version
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '2.0.2';
+	const VERSION = '2.0.3';
 
 	/**
 	 * Minimum Elementor Version
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @var string Minimum Elementor version required to run the plugin.
 	 */
@@ -49,7 +51,7 @@ final class AdvancedImageComparison
 	/**
 	 * Minimum PHP Version
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @var string Minimum PHP version required to run the plugin.
 	 */
@@ -58,7 +60,7 @@ final class AdvancedImageComparison
 	/**
 	 * Instance
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access private
 	 * @static
@@ -73,7 +75,7 @@ final class AdvancedImageComparison
 	 *
 	 * Ensures only one instance of the class is loaded or can be loaded.
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 * @static
@@ -93,7 +95,7 @@ final class AdvancedImageComparison
 	/**
 	 * Constructor
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 */
@@ -110,7 +112,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `init` action hook.
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 */
@@ -127,35 +129,55 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 */
 	public function on_plugins_loaded() {
-
+		
 		if ( $this->is_compatible() ) {
 			add_action( 'elementor/init', [ $this, 'init' ] );
 		}
 	
 		add_action( 'admin_notices', [$this, 'aic_admin_Notice'] );
+		add_action( 'admin_init', [$this,  'aic_notice_dismissed'] );
 	}
 	
 	public function aic_admin_Notice() {
 		//get the current screen
 		$screen = get_current_screen();
 		//Checks if settings updated 
+		$user_id = get_current_user_id();
+
+		$nonce = wp_create_nonce('aic_dismiss_notice_nonce');
+
+		if (!get_user_meta( $user_id, 'aic-notice-dismissed', true )) {
+			add_user_meta($user_id, 'aic-notice-dismissed', 'active');
+		}
+
 		if ( $screen->id == 'dashboard' ||  $screen->id == 'plugins' ) {
-			?>
-				<div class="notice notice-success is-dismissible">
-					<p>
-						<?php _e('Congratulations! you have installed "Advanced Image Comparison" for elementor plugin, Please rating this plugin.', 'advanced-image-comparison-for-elementor'); ?>
-						<em><a href="https://wordpress.org/support/plugin/advanced-image-comparison-for-elementor/reviews/#new-post" target="_blank">Rating</a></em>
-					</p>
-				</div>
-			<?php
+			if ( get_user_meta( $user_id, 'aic-notice-dismissed', true ) == 'active' ) { 
+				?>
+					<div class="notice notice-success is-dismissible">
+						<p>
+							<?php echo esc_html__('Congratulations! you have installed "Advanced Image Comparison" for elementor plugin, Please rating this plugin.', 'advanced-image-comparison-for-elementor'); ?>
+							<em><a href="https://wordpress.org/support/plugin/advanced-image-comparison-for-elementor/reviews/#new-post" target="_blank">Rating</a></em>
+						</p>
+						<a href="?aic-dismissed-notice=1&_aic_nonce=<?php echo esc_attr($nonce); ?>" type="button" class="notice-dismiss"></a>
+					</div>
+				<?php
+			}
 		}
 	}
 
+
+	public function aic_notice_dismissed() {
+		$user_id = get_current_user_id();
+
+		if (isset($_GET['aic-dismissed-notice']) && isset($_GET['_aic_nonce']) && wp_verify_nonce($_GET['_aic_nonce'], 'aic_dismiss_notice_nonce')) {
+			update_user_meta($user_id, 'aic-notice-dismissed', 'deactive');
+		}
+	}
 
 	/**
 	 * Compatibility Checks
@@ -163,7 +185,7 @@ final class AdvancedImageComparison
 	 * Checks if the installed version of Elementor meets the plugin's minimum requirement.
 	 * Checks if the installed PHP version meets the plugin's minimum requirement.
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 */
@@ -199,7 +221,7 @@ final class AdvancedImageComparison
 	 *
 	 * Fired by `plugins_loaded` action hook.
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 */
@@ -217,9 +239,9 @@ final class AdvancedImageComparison
 
 		// after_enqueue_scripts
 		add_action('elementor/frontend/after_enqueue_scripts', function() {
-			wp_enqueue_script( 'aic-move-js', plugin_dir_url( __FILE__ ). 'assets/js/jquery.event.move.js', array('jquery'), AIC_PLUGIN_VERSION);
-			wp_enqueue_script( 'aic-twentytwenty-js', plugin_dir_url( __FILE__ ). 'assets/js/jquery.twentytwenty.js', array('jquery'), AIC_PLUGIN_VERSION);
-			wp_enqueue_script( 'aic-custom-js', plugin_dir_url( __FILE__ ). 'assets/js/custom.js', array('jquery'), AIC_PLUGIN_VERSION);
+			wp_enqueue_script( 'aic-move-js', plugin_dir_url( __FILE__ ). 'assets/js/jquery.event.move.js', array('jquery'), AIC_PLUGIN_VERSION, true);
+			wp_enqueue_script( 'aic-twentytwenty-js', plugin_dir_url( __FILE__ ). 'assets/js/jquery.twentytwenty.js', array('jquery'), AIC_PLUGIN_VERSION, true);
+			wp_enqueue_script( 'aic-custom-js', plugin_dir_url( __FILE__ ). 'assets/js/custom.js', array('jquery'), AIC_PLUGIN_VERSION, true);
 		});
 	}
 
@@ -228,7 +250,7 @@ final class AdvancedImageComparison
 	 *
 	 * Include widgets files and register them
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 */
@@ -252,7 +274,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have Elementor installed or activated.
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 */
@@ -267,7 +289,7 @@ final class AdvancedImageComparison
 			'<strong>' . esc_html__( 'Elementor', 'advanced-image-comparison-for-elementor' ) . '</strong>'
 		);
 
-		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message) );
 
 	}
 
@@ -276,7 +298,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have a minimum required Elementor version.
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 */
@@ -292,7 +314,7 @@ final class AdvancedImageComparison
 			 self::MINIMUM_ELEMENTOR_VERSION
 		);
 
-		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message) );
 
 	}
 
@@ -301,7 +323,7 @@ final class AdvancedImageComparison
 	 *
 	 * Warning when the site doesn't have a minimum required PHP version.
 	 *
-	 * @since 2.0.2
+	 * @since 2.0.3
 	 *
 	 * @access public
 	 */
@@ -317,10 +339,16 @@ final class AdvancedImageComparison
 			 self::MINIMUM_PHP_VERSION
 		);
 
-		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message) );
 
-	}
-
+	}	
 }
 
 AdvancedImageComparison::instance();
+
+
+function deactivatePlugin() {
+	$user_id = get_current_user_id();
+	update_user_meta($user_id, 'aic-notice-dismissed', 'active');
+}
+register_deactivation_hook( __FILE__, 'deactivatePlugin' );

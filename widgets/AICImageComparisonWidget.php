@@ -710,10 +710,13 @@ class AICImageComparisonWidget extends Widget_Base
             ]
         );
 
-        echo '<div ' . $this->get_render_attribute_string( 'aic-attr' ) . '>
-			<img class="aic-before-img" alt="' . esc_attr( $beforeImageAlt ) . '" src="' . esc_url( $beforeImage['url'] ) . '">
-			<img class="aic-after-img" alt="' . esc_attr( $afterImageAlt ) . '" src="' . esc_url( $afterImage['url'] ) . '">
-        </div>';
-    }
+        ?>
+        
+        <div <?php echo wp_kses_post($this->get_render_attribute_string( 'aic-attr' )); ?>>
+			<img class="aic-before-img" alt="<?php echo esc_attr( $beforeImageAlt ); ?>" src="<?php echo esc_url( $beforeImage['url'] ); ?>">
+			<img class="aic-after-img" alt="<?php  echo esc_attr( $afterImageAlt ); ?>" src="<?php echo esc_url( $afterImage['url'] );  ?>">
+        </div>
 
+        <?php
+    }
 } 
