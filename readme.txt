@@ -3,8 +3,8 @@ Contributors: ruhel241, wpcreativeidea
 Tags:  before after image comparison slider, Elementor, Image Comparison, after, before.
 Requires at least: 4.5
 Requires PHP: 7.0
-Tested up to: 6.6.1
-Stable tag: 2.0.3
+Tested up to: 6.9
+Stable tag: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,9 @@ Yes you can style color and background type, border radius box shadow.
 7. Frontend Image view
 
 == Changelog ==
+
+= 2.0.4 (Date: December 08 2025) =
+* WordPress Version 6.9 Compatible
 
 = 2.0.3 =
 * WordPress Version 6.6.1 Compatible 
